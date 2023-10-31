@@ -83,7 +83,7 @@ public class Root extends Application {
         root.getChildren().addAll(inputPanel, noteList, buttonPanel);
 
         Scene scene = new Scene(root);
-        scene.getStylesheets().add("styles.css");
+        scene.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
         primaryStage.setScene(scene);
 
         //Styling/////
