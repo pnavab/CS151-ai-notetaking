@@ -38,6 +38,7 @@ public class Root extends Application {
 
         HBox buttonPanel = new HBox();
         Button newButton = new Button("New");
+        newButton.getStyleClass().add("note-title");
         Button saveButton = new Button("Save");
 
         buttonPanel.getChildren().addAll(newButton, saveButton);
@@ -82,7 +83,12 @@ public class Root extends Application {
         root.getChildren().addAll(inputPanel, noteList, buttonPanel);
 
         Scene scene = new Scene(root);
+        scene.getStylesheets().add("styles.css");
         primaryStage.setScene(scene);
+
+        //Styling/////
+        noteList.setId("note-title");
+        textArea.setId("note-title");
 
         notes = new ArrayList<>();
         primaryStage.show();

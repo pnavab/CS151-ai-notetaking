@@ -1,0 +1,13 @@
+/* styles.css */
+.root {
+    -fx-background-color: yellow;
+}
+
+.note-title {
+    -fx-background-color: yellow; /* Example background color for the title */
+}
+
+.note-content {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+}
