@@ -13,13 +13,14 @@ public class Gpt {
     }
     public static String chatGPT(String prompt) {
         String apiKey = System.getenv("API_KEY");
+        System.out.println(apiKey);
         String apiUrl = "https://api.openai.com/v1/chat/completions";
         String model = "gpt-3.5-turbo";
 
         try {
             //HTTP post request
             URL obj = new URL(apiUrl);
-            HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+            HttpURLConnection con = (HttpURLConnection)obj.openConnection();
             con.setRequestMethod("POST");
             con.setRequestProperty("Authorization", "Bearer " + apiKey);
             con.setRequestProperty("Content-Type", "application/json");
@@ -41,11 +42,18 @@ public class Gpt {
             }
             in.close();
 
-            return (response.toString().split("\"content\":\"")[1].split("\"")[0]).substring(4);
+            return extractContentFromResponse(response.toString());
+            //return (response.toString().split("\"content\":\"")[1].split("\"")[0]).substring(4);
 
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public static String extractContentFromResponse(String response) {
+        int startMarker = response.indexOf("content")+11; // Marker for where the content starts.
+        int endMarker = response.indexOf("\"", startMarker); // Marker for where the content ends.
+        return response.substring(startMarker, endMarker); // Returns the substring containing only the response.
     }
 }
 

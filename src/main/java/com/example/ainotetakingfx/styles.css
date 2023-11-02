@@ -1,13 +1,26 @@
 /* styles.css */
 .root {
-    -fx-background-color: yellow;
+    -fx-background-color: rgb(236, 208, 162);
 }
 
 .note-title {
-    -fx-background-color: yellow; /* Example background color for the title */
+    -fx-background-color: rgb(251, 234, 206);
 }
 
 .note-content {
     -fx-font-size: 14px;
     -fx-text-fill: #333333;
+}
+
+.button {
+    -fx-background-color: rgb(251, 234, 206);
+    -fx-border-color:  rgb(161, 161, 161);
+    -fx-alignment: center;
+}
+
+.text-field{
+    -fx-background-color: rgb(251, 234, 206);
+}
+.text-area .content {
+    -fx-background-color: rgb(236, 208, 162);
 }

@@ -23,7 +23,7 @@ public class Root extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) {
+    public void start(Stage primaryStage){
         primaryStage.setTitle("Root");
         primaryStage.setWidth(800);
         primaryStage.setHeight(600);
@@ -83,12 +83,16 @@ public class Root extends Application {
         root.getChildren().addAll(inputPanel, noteList, buttonPanel);
 
         Scene scene = new Scene(root);
-        //scene.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
         primaryStage.setScene(scene);
 
         //Styling//
         noteList.setId("note-title");
         textArea.setId("note-title");
+        newButton.setId("button");
+        saveButton.setId("button");
+        //titleField.setId("text-area");
+        //textArea.setId("text-area");
 
         notes = new ArrayList<>();
         primaryStage.show();
