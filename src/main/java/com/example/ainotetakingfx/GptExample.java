@@ -7,14 +7,12 @@ import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class GptExample {
+public class Gpt {
     public static void main(String[] args){
         System.out.println(chatGPT("what are you"));
     }
     public static String chatGPT(String prompt) {
-        // you must enter your own openAi key here in order for it to work, as well as rename this file and class to "Gpt"
-        String apiKey = "----YOUR KEY GOES HERE----";
-        System.out.println(apiKey);
+        String apiKey = "";
         String apiUrl = "https://api.openai.com/v1/chat/completions";
         String model = "gpt-3.5-turbo";
 
