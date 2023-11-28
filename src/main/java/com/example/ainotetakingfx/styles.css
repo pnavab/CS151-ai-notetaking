@@ -7,10 +7,6 @@
     -fx-background-color: rgb(251, 234, 206);
 }
 
-.note-content {
-    -fx-font-size: 14px;
-    -fx-text-fill: #333333;
-}
 
 .button {
     -fx-background-color: rgb(251, 234, 206);
@@ -20,6 +16,9 @@
 
 .text-field{
     -fx-background-color: rgb(251, 234, 206);
+}
+.text-area {
+    -fx-width: 100%;
 }
 .text-area .content {
     -fx-background-color: rgb(236, 208, 162);

@@ -12,8 +12,7 @@ public class Gpt {
         System.out.println(chatGPT("what are you"));
     }
     public static String chatGPT(String prompt) {
-        String apiKey = System.getenv("API_KEY");
-        System.out.println(apiKey);
+        String apiKey = "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";
         String apiUrl = "https://api.openai.com/v1/chat/completions";
         String model = "gpt-3.5-turbo";
 
@@ -56,4 +55,3 @@ public class Gpt {
         return response.substring(startMarker, endMarker); // Returns the substring containing only the response.
     }
 }
-

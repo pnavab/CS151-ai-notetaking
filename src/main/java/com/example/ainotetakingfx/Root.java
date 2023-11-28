@@ -25,7 +25,7 @@ public class Root extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage){
+    public void start(Stage primaryStage) {
         primaryStage.setTitle("Root");
         primaryStage.setWidth(800);
         primaryStage.setHeight(600);
@@ -87,18 +87,20 @@ public class Root extends Application {
             }
         });
 
-        // Add the title field and query field above the text area
-        VBox inputPanel = new VBox();
-        inputPanel.getChildren().addAll(titleField, queryField);
-        // BorderPane.setAlignment(inputPanel, Pos.CENTER);
-        // BorderPane.setMargin(inputPanel, new Insets(10, 0, 10, 0));
+        // VBox for the title field
+        VBox titlePanel = new VBox();
+        titlePanel.getChildren().addAll(new Label("Title"), titleField);
 
-        BorderPane textAreaPanel = new BorderPane();
-        textAreaPanel.setTop(inputPanel);
-        textAreaPanel.setCenter(scrollPane);
+        // VBox for the query field
+        VBox queryPanel = new VBox();
+        queryPanel.getChildren().addAll(new Label("Query"), queryField);
+
+        // VBox for the text area
+        VBox textAreaPanel = new VBox();
+        textAreaPanel.getChildren().addAll(new Label("Text Area"), scrollPane);
 
         VBox root = new VBox();
-        root.getChildren().addAll(textAreaPanel, noteList, buttonPanel);
+        root.getChildren().addAll(titlePanel, queryPanel, textAreaPanel, noteList, buttonPanel);
 
         Scene scene = new Scene(root);
         scene.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
@@ -111,7 +113,7 @@ public class Root extends Application {
         saveButton.setId("button");
         queryButton.setId("button");
         // titleField.setId("text-area");
-        // textArea.setId("text-area");
+        textArea.setId("text-area");
 
         notes = new ArrayList<>();
         primaryStage.show();
