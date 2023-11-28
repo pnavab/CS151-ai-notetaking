@@ -5,6 +5,7 @@ target/
 
 ### ChatGPT API Key ###
 *.env
+Gpt.*
 
 
 ### IntelliJ IDEA ###
