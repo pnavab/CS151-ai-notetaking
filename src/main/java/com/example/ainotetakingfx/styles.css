@@ -1,25 +1,36 @@
 /* styles.css */
 .root {
-    -fx-background-color: rgb(236, 208, 162);
+    -fx-background-color: #343541e6;
+    -fx-text-fill: white;
 }
 
 .note-title {
-    -fx-background-color: rgb(251, 234, 206);
+    -fx-background-color: #343541e6;
+    -fx-text-fill: white;
+
 }
 
 
 .button {
-    -fx-background-color: rgb(251, 234, 206);
+    -fx-background-color: #343541e6;
     -fx-border-color:  rgb(161, 161, 161);
     -fx-alignment: center;
+    -fx-text-fill: white;
+
 }
 
 .text-field{
-    -fx-background-color: rgb(251, 234, 206);
+    -fx-background-color: #343541e6;
+    -fx-text-fill: white;
+
 }
 .text-area {
     -fx-width: 100%;
+    -fx-text-fill: white;
+
 }
 .text-area .content {
-    -fx-background-color: rgb(236, 208, 162);
+    -fx-background-color: #343541e6;
+    -fx-text-fill: white;
+
 }
