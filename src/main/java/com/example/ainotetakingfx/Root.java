@@ -87,17 +87,20 @@ public class Root extends Application {
             }
         });
 
-        // VBox for the title field
-        VBox titlePanel = new VBox();
+        // HBox for the title field and label
+        HBox titlePanel = new HBox();
         titlePanel.getChildren().addAll(new Label("Title"), titleField);
+        HBox.setHgrow(titlePanel, Priority.ALWAYS); // Make it grow horizontally
 
-        // VBox for the query field
-        VBox queryPanel = new VBox();
-        queryPanel.getChildren().addAll(new Label("Query"), queryField);
+        // HBox for the query field and button
+        HBox queryPanel = new HBox();
+        queryPanel.getChildren().addAll(new Label("Query"), queryField, queryButton);
+        HBox.setHgrow(queryPanel, Priority.ALWAYS); // Make it grow horizontally
 
         // VBox for the text area
         VBox textAreaPanel = new VBox();
         textAreaPanel.getChildren().addAll(new Label("Text Area"), scrollPane);
+        VBox.setVgrow(textAreaPanel, Priority.ALWAYS); // Make it grow both horizontally and vertically
 
         VBox root = new VBox();
         root.getChildren().addAll(titlePanel, queryPanel, textAreaPanel, noteList, buttonPanel);
@@ -113,7 +116,7 @@ public class Root extends Application {
         saveButton.setId("button");
         queryButton.setId("button");
         // titleField.setId("text-area");
-        textArea.setId("text-area");
+        // textArea.setId("text-area");
 
         notes = new ArrayList<>();
         primaryStage.show();
