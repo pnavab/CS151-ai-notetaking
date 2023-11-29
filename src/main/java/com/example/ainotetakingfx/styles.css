@@ -26,10 +26,23 @@
     -fx-text-align: center;
     -fx-margin: 4px 2px;
     -fx-border-radius: 3px;
+    -fx-effect: none;
 }
 
 .button:hover {
     -fx-background-color: rgb(161, 161, 161);
+    -fx-border-color: #343541e6;
+    -fx-margin: 4px 2px;
+    -fx-effect: none;
+}
+
+.list-view {
+    -fx-background-color: #343541e6;
+}
+
+.list-view .list-cell {
+    -fx-text-fill: white; 
+    -fx-background-color: #343541e6;
 }
 
 .text-field{
@@ -41,12 +54,19 @@
 
 }
 .text-area {
-    -fx-width: 100%;
+    -fx-background-color: #343541e6;
     -fx-text-fill: white;
+    -fx-control-inner-background: #343541e6;
+    -fx-wrap-text: true;
 
 }
-.text-area .content {
+
+.text-area:focused {
     -fx-background-color: #343541e6;
+}
+
+.text-area .content {
+    
     -fx-text-fill: white;
 
 }
