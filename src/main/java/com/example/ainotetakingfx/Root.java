@@ -4,7 +4,6 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
-import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -44,7 +43,7 @@ public class Root extends Application {
         Button newButton = new Button("New");
         newButton.getStyleClass().add("note-title");
         Button saveButton = new Button("Save");
-        Button queryButton = new Button("Query"); // Button for sending queries
+        Button queryButton = new Button(">"); // Button for sending queries
 
         buttonPanel.getChildren().addAll(newButton, saveButton, queryButton);
 
@@ -90,28 +89,20 @@ public class Root extends Application {
 
         // HBox for the title field and label
         HBox titlePanel = new HBox();
-
-        Label title = new Label("Title");
-        title.setTextFill(Color.WHITE);
-        titlePanel.getChildren().addAll(title, titleField);
+        titlePanel.getChildren().addAll(new Label("Title"), titleField);
         HBox.setHgrow(titlePanel, Priority.ALWAYS); // Make it grow horizontally
 
         // HBox for the query field and button
         HBox queryPanel = new HBox();
-        Label query = new Label("Query");
-        query.setTextFill(Color.WHITE);
-        queryPanel.getChildren().addAll(query, queryField, queryButton);
+        queryPanel.getChildren().addAll(new Label("Query"), queryField, queryButton);
         HBox.setHgrow(queryPanel, Priority.ALWAYS); // Make it grow horizontally
 
         // VBox for the text area
         VBox textAreaPanel = new VBox();
-        Label text = new Label("Text Area");
-        text.setTextFill(Color.WHITE);
-        textAreaPanel.getChildren().addAll(text, scrollPane);
+        textAreaPanel.getChildren().addAll(new Label("Text Area"), scrollPane);
         VBox.setVgrow(textAreaPanel, Priority.ALWAYS); // Make it grow both horizontally and vertically
 
         VBox root = new VBox();
-        root.getStyleClass().add("custom-root");
         root.getChildren().addAll(titlePanel, queryPanel, textAreaPanel, noteList, buttonPanel);
 
         Scene scene = new Scene(root);

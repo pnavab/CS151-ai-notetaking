@@ -12,7 +12,7 @@ public class Gpt {
         System.out.println(chatGPT("what are you"));
     }
     public static String chatGPT(String prompt) {
-        String apiKey = "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";
+        String apiKey = "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";
         String apiUrl = "https://api.openai.com/v1/chat/completions";
         String model = "gpt-3.5-turbo";
 

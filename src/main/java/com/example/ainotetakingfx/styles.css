@@ -7,21 +7,37 @@
 .note-title {
     -fx-background-color: #343541e6;
     -fx-text-fill: white;
-
+    -fx-border-color: rgb(161, 161, 161);
+    -fx-border-radius: 4px;
+    -fx-margin: 4px 2px;
 }
 
+.label {
+    -fx-text-fill: white;
+    -fx-text-align: center;
+    -fx-padding: 2px 5px;
+}
 
 .button {
     -fx-background-color: #343541e6;
-    -fx-border-color:  rgb(161, 161, 161);
+    -fx-border-color: rgb(161, 161, 161);
     -fx-alignment: center;
     -fx-text-fill: white;
+    -fx-text-align: center;
+    -fx-margin: 4px 2px;
+    -fx-border-radius: 3px;
+}
 
+.button:hover {
+    -fx-background-color: rgb(161, 161, 161);
 }
 
 .text-field{
     -fx-background-color: #343541e6;
     -fx-text-fill: white;
+    -fx-border-color:rgb(161, 161, 161);
+    -fx-border-radius: 4px;
+    -fx-margin: 4px 2px;
 
 }
 .text-area {
