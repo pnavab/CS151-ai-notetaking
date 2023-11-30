@@ -1,5 +1,6 @@
-package src;
+package com.example.ainotetakingfx;
 
+//Creates note object with title and content fields
 public class Note {
     private String title;
     private String content;
@@ -8,6 +9,8 @@ public class Note {
         this.title = title;
         this.content = content;
     }
+
+    //set and get methods for all fields
 
     public String getTitle() {
         return title;
