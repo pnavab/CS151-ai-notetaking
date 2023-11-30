@@ -55,6 +55,10 @@ public class Root extends Application {
         saveButton.setOnAction(e -> {
             String currentNoteContent = textArea.getText();
             String currentTitle = titleField.getText();
+            //check if a title was specified, set title to '*untitled note' if not
+            if( currentTitle.equals("")){
+                currentTitle = "*untitled note";
+            }
             int selectedIndex = noteList.getSelectionModel().getSelectedIndex();
             textArea.clear();
             titleField.clear();
