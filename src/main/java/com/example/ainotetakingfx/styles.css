@@ -18,8 +18,8 @@
 /*styles labels for textboxes*/
 .label {
     -fx-text-fill: white;
-    -fx-text-align: center;
-    -fx-padding: 2px 5px;
+    -fx-text-alignment: center;
+    -fx-label-padding: 2px 5px;
 }
 
 /*styles button by whitening text, rounding corners, and adding padding*/
@@ -28,10 +28,9 @@
     -fx-border-color: rgb(161, 161, 161);
     -fx-alignment: center;
     -fx-text-fill: white;
-    -fx-text-align: center;
+    -fx-text-alignment: center;
     -fx-margin: 4px 2px;
     -fx-border-radius: 3px;
-    -fx-effect: none;
 }
 
 /*creates hover effect for buttons*/
@@ -39,7 +38,6 @@
     -fx-background-color: rgb(161, 161, 161);
     -fx-border-color: #343541e6;
     -fx-margin: 4px 2px;
-    -fx-effect: none;
 }
 
 /*colors note list*/
@@ -66,6 +64,7 @@
 /*styles text input area and allows for text wrapping*/
 .text-area {
     -fx-background-color: #343541e6;
+    -fx-border-color: rgb(161, 161, 161);
     -fx-text-fill: white;
     -fx-control-inner-background: #343541e6;
     -fx-wrap-text: true;
@@ -73,12 +72,10 @@
 }
 
 /*changes text field color when focused*/
-.text-area:focused {
+.text-area .focused {
     -fx-background-color: #343541e6;
 }
 
 .text-area .content {
-    
     -fx-text-fill: white;
-
 }

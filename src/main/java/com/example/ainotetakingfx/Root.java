@@ -55,7 +55,7 @@ public class Root extends Application {
         Button newButton = new Button("New");
         newButton.getStyleClass().add("note-title");
         Button saveButton = new Button("Save");
-        Button queryButton = new Button("Ask"); // Button for sending queries
+        Button queryButton = new Button(">"); // Button for sending queries
 
         buttonPanel.getChildren().addAll(newButton, saveButton, queryButton);
 
@@ -125,7 +125,7 @@ public class Root extends Application {
         titlePanel.getChildren().addAll(new Label("Title"), titleField);
         HBox.setHgrow(titlePanel, Priority.ALWAYS); // Make it grow horizontally
 
-        // HBox for the query field and button
+        // HBox for the query field, label, and button
         HBox queryPanel = new HBox();
         queryPanel.setAlignment(Pos.CENTER); // Center content both horizontally and vertically
         queryPanel.getChildren().addAll(new Label("ChatGPT"), queryField, queryButton);
@@ -141,10 +141,11 @@ public class Root extends Application {
         VBox root = new VBox();
         root.getChildren().addAll(titlePanel, queryPanel, textAreaPanel, noteList, buttonPanel);
 
-        //Create scene to implement CSS Styling
+        //Create scene and implement CSS Styling
         Scene scene = new Scene(root);
         scene.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
         primaryStage.setScene(scene);
+        primaryStage.setTitle("AI Notebook"); //set title of window
         notes = new ArrayList<>();
         primaryStage.show();
     }
