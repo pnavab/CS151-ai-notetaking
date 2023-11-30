@@ -18,7 +18,7 @@ public class Gpt {
     public static String chatGPT(String prompt) {
 
         //Names API key, API endpoint, and model name
-        String apiKey = "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";
+        String apiKey = "";
         String apiUrl = "https://api.openai.com/v1/chat/completions";
         String model = "gpt-3.5-turbo";
 
@@ -31,7 +31,7 @@ public class Gpt {
             con.setRequestProperty("Content-Type", "application/json");
 
             //request body containing model and user message
-            String body = "{\"model\": \"" + model + "\", \"messages\": [{\"role\": \"user\", \"content\": \"" + prompt + "\"}]}";
+            String body = "{\"model\": \"" + model + "\", \"messages\": [{\"role\": \"user\", \"content\": \"" + "Answer the following prompt as briefly as you can: '" + prompt + "'" + "\"}]}";
             con.setDoOutput(true);
             OutputStreamWriter writer = new OutputStreamWriter(con.getOutputStream());
             writer.write(body);
