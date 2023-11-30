@@ -56,8 +56,9 @@ public class Root extends Application {
         newButton.getStyleClass().add("note-title");
         Button saveButton = new Button("Save");
         Button queryButton = new Button(">"); // Button for sending queries
+        Button deleteButton = new Button("Del"); //Button for deleting notes
 
-        buttonPanel.getChildren().addAll(newButton, saveButton, queryButton);
+        buttonPanel.getChildren().addAll(newButton, saveButton, queryButton, deleteButton);
 
         //New Button: Clears text areas and unselects note from list
         newButton.setOnAction(e -> {
@@ -106,6 +107,33 @@ public class Root extends Application {
             textArea.appendText("\n" + response);
         });
 
+        //Deletes the note that corresponds with the selected index of the note and clears all the text
+        deleteButton.setOnAction(e -> {
+          int selectedIndex = noteList.getSelectionModel().getSelectedIndex();
+      
+          if (selectedIndex != -1) {
+              notes.remove(selectedIndex);
+              listModel.remove(selectedIndex);
+      
+              if (!notes.isEmpty()) {
+                  // Set the selection to the previous note if available
+                  int newSelectedIndex = Math.min(selectedIndex, notes.size() - 1);
+                  noteList.getSelectionModel().select(newSelectedIndex);
+      
+                  // Update text fields with the new selected note
+                  Note newSelectedNote = noteList.getSelectionModel().getSelectedItem();
+                  textArea.setText(newSelectedNote.getContent());
+                  titleField.setText(newSelectedNote.getTitle());
+              } else {
+                  // Clear text fields if no notes are left
+                  textArea.clear();
+                  titleField.clear();
+                  queryField.clear();
+              }
+          }
+        });
+      
+      
         // Sets up listener for selected item in noteList
         noteList.getSelectionModel().selectedItemProperty().addListener((obs, oldVal, newVal) -> {
             Note selectedNote = noteList.getSelectionModel().getSelectedItem();
