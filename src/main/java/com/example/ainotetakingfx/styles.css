@@ -1,9 +1,12 @@
 /* styles.css */
+
+/*colors entire scene into dark theme*/
 .root {
     -fx-background-color: #343541e6;
     -fx-text-fill: white;
 }
 
+/*styles title field and pads text boxes*/
 .note-title {
     -fx-background-color: #343541e6;
     -fx-text-fill: white;
@@ -12,12 +15,14 @@
     -fx-margin: 4px 2px;
 }
 
+/*styles labels for textboxes*/
 .label {
     -fx-text-fill: white;
     -fx-text-align: center;
     -fx-padding: 2px 5px;
 }
 
+/*styles button by whitening text, rounding corners, and adding padding*/
 .button {
     -fx-background-color: #343541e6;
     -fx-border-color: rgb(161, 161, 161);
@@ -29,6 +34,7 @@
     -fx-effect: none;
 }
 
+/*creates hover effect for buttons*/
 .button:hover {
     -fx-background-color: rgb(161, 161, 161);
     -fx-border-color: #343541e6;
@@ -36,15 +42,18 @@
     -fx-effect: none;
 }
 
+/*colors note list*/
 .list-view {
     -fx-background-color: #343541e6;
 }
 
+/*colors notes titles in note list*/
 .list-view .list-cell {
     -fx-text-fill: white; 
     -fx-background-color: #343541e6;
 }
 
+/*styles borders for text input box*/ 
 .text-field{
     -fx-background-color: #343541e6;
     -fx-text-fill: white;
@@ -53,6 +62,8 @@
     -fx-margin: 4px 2px;
 
 }
+
+/*styles text input area and allows for text wrapping*/
 .text-area {
     -fx-background-color: #343541e6;
     -fx-text-fill: white;
@@ -61,6 +72,7 @@
 
 }
 
+/*changes text field color when focused*/
 .text-area:focused {
     -fx-background-color: #343541e6;
 }
