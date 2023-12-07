@@ -19,6 +19,7 @@ The project will be completed entirely in Java, using the built-in J-Frame for t
 3. You can now name a note, ask GPT something, and format the note however you want. You can save the note, create new notes, as well as delete any existing notes by opening the note to delete and clicking the Delete button.
 
 # 3
+### Our app running
 ![image](https://github.com/pnavab/CS151-ai-notetaking/assets/114110926/9d23377d-0b32-404b-ab22-56eaba86fd3a)
 
 
